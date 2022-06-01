@@ -15,7 +15,7 @@
                 padding: 0;
             }
 
-            .bgimg-1 {
+            .bgimg_1 {
                 background-image: url("/src/FirstLook.jpg");
                 height: 100%;
                 position: relative;
@@ -24,11 +24,41 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
+            .bgimg_2 {
+                background-image: url("/src/Proshot.jpg");
+                height: 100%;
+                position: relative;
+                opacity: 1;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: none;
+            }
         </style>
     </head>
     <body>
-        <div class="bgimg-1">
+        <div class="bgimg_1">
+            &nbsp;
+        </div>
+        <div class="bgimg_2">
             &nbsp;
         </div>
     </body>
+    <script>
+        var imgidx = 0;
+        Slides();
+        function Slides(){
+            imgidx ++;
+            i1 = document.getElementsByClassName("bgimg_1");
+            i2 = document.getElementsByClassName("bgimg_2");
+            if (imgidx % 2 === 0){
+                i1[0].style.display = "none";
+                i2[0].style.display = "block"
+            }else{
+                i1[0].style.display = "block";
+                i2[0].style.display = "none"
+            }
+            setTimeout(Slides, 4000);
+        }
+    </script>
 </html>
