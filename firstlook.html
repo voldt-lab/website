@@ -15,8 +15,7 @@
                 padding: 0;
             }
 
-            .bgimg_1 {
-                background-image: url("/src/FirstLook.jpg");
+            .bgimg{
                 height: 100%;
                 position: relative;
                 opacity: 1;
@@ -24,39 +23,73 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-            .bgimg_2 {
+            #i0 {
                 background-image: url("/src/Proshot.jpg");
-                height: 100%;
-                position: relative;
-                opacity: 1;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                display: none;
+            }
+            #i1 {
+                background-image: url("/src/FirstLook.jpg");
+            }
+            #i2{
+                background-image: url("/src/00.jpg");
+            }
+            #i3{
+                background-image: url("/src/01.jpg");
+            }
+            #i4{
+                background-image: url("/src/02.jpg");
             }
         </style>
     </head>
     <body>
-        <div class="bgimg_1">
+        
+        <div class="bgimg" id="i0">
             &nbsp;
         </div>
-        <div class="bgimg_2">
+        <div class="bgimg" id="i1">
+            &nbsp;
+        </div>
+        <div class="bgimg" id="i2">
+            &nbsp;
+        </div>
+        <div class="bgimg" id="i3" >
+            &nbsp;
+        </div>
+        <div class="bgimg" id="i4">
             &nbsp;
         </div>
     </body>
     <script>
         var imgidx = 0;
         Slides();
+        function HideAll(l){
+            for (let i = 0; i < l.length; i++){
+                l[i].style.display="none";
+            }
+        }
         function Slides(){
             imgidx ++;
-            i1 = document.getElementsByClassName("bgimg_1");
-            i2 = document.getElementsByClassName("bgimg_2");
-            if (imgidx % 2 === 0){
-                i1[0].style.display = "none";
-                i2[0].style.display = "block"
-            }else{
-                i1[0].style.display = "block";
-                i2[0].style.display = "none"
+            i0 = document.getElementById("i0");
+            i1 = document.getElementById("i1");
+            i2 = document.getElementById("i2");
+            i3 = document.getElementById("i3");
+            i4 = document.getElementById("i4");
+            var items = [i0,i1,i2,i3,i4,];
+            if (imgidx === 1){
+                HideAll(items);
+                items[0].style.display="block";
+            }else if(imgidx === 2){
+                HideAll(items);
+                items[1].style.display="block";
+            }else if(imgidx === 3){
+                HideAll(items);
+                items[2].style.display="block";
+            }else if(imgidx === 4){
+                HideAll(items);
+                items[3].style.display="block";
+            }else if(imgidx === 5){
+                HideAll(items);
+                items[4].style.display="block";
+                imgidx = 0;
             }
             setTimeout(Slides, 4000);
         }
