@@ -6,11 +6,12 @@
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto+Mono"/>
         <style>
-            p, input{
-                text-align: center;
+            p {
+                text-align: left;
                 font-family: "Roboto Mono", sans-serif;
                 font-size: medium;
                 color: #fff;
+                text-shadow: 1px 1px 2px rgb(0, 0, 0);
             }
 
             html, body {
@@ -20,7 +21,16 @@
                 background-color: rgb(31, 31, 31);
             }
 
+            #floater{
+                position: absolute;
+                top: 15%;
+                left: 15%;
+                z-index: 2;
+            }
+
             input {
+                font-family: "Roboto Mono", sans-serif;
+                font-size: medium;
                 display: block;
                 width: 100%;
                 padding: 10px 15px;
@@ -64,21 +74,16 @@
         </style>
     </head>
     <body>
-        <div>
+        <div id="floater">
             <br/>
-        </div>
-        <div>
             <p>we are voldt</p>
-        </div>
-        <div>
             <p>check out what we have been working on</p>
             <form action="https://www.kickstarter.com/projects/voldt/light-from-the-multiverse" style="text-align: center;">
-                <input type="submit" value=">>>" />
+                <input type="submit" value="&#128640;" />
             </form>
+            <br/>
         </div>
-        <div>
-            &nbsp;
-        </div>
+        
 
 
         <div class="bgimg" id="i0">
