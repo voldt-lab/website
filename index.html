@@ -64,7 +64,7 @@
                 animation-duration: 4s;
             }
             #i1 {
-                background-image: url("/src/FirstLook.jpg");
+                background-image: url("/src/bluminaire.jpg");
                 animation-name: fader;
                 animation-duration: 4s;
             }
@@ -79,6 +79,11 @@
                 animation-duration: 4s;
             }
             #i4{
+                background-image: url("/src/bluminaires.jpg");
+                animation-name: fader;
+                animation-duration: 4s;
+            }
+            #i5{
                 background-image: url("/src/02.jpg");
                 animation-name: fader;
                 animation-duration: 4s;
@@ -117,6 +122,9 @@
         <div class="bgimg" id="i4">
             &nbsp;
         </div>
+        <div class="bgimg" id="i5">
+            &nbsp;
+        </div>
     </body>
 
     <script>
@@ -134,7 +142,8 @@
             i2 = document.getElementById("i2");
             i3 = document.getElementById("i3");
             i4 = document.getElementById("i4");
-            var items = [i0,i1,i2,i3,i4,];
+            i5 = document.getElementById("i5")
+            var items = [i0,i1,i2,i3,i4,i5];
             if (imgidx === 1){
                 HideAll(items);
                 items[0].style.display="block";
@@ -151,7 +160,12 @@
                 HideAll(items);
                 items[4].style.display="block";
                 imgidx = 0;
+            }else if(imgidx == 6){
+                HideAll(items);
+                items[5].style.display="block";
+                imgidx = 0;
             }
+
             setTimeout(Slides, 4000);
         }
     </script>
