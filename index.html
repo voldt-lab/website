@@ -69,7 +69,7 @@
                 animation-duration: 4s;
             }
             #i2{
-                background-image: url("/src/00.jpg");
+                background-image: url("/src/tulip0.jpg");
                 animation-name: fader;
                 animation-duration: 4s;
             }
@@ -85,6 +85,16 @@
             }
             #i5{
                 background-image: url("/src/02.jpg");
+                animation-name: fader;
+                animation-duration: 4s;
+            }
+            #i6{
+                background-image: url("/src/00.jpg");
+                animation-name: fader;
+                animation-duration: 4s;
+            }
+            #i7{
+                background-image: url("/src/tulip1.jpg");
                 animation-name: fader;
                 animation-duration: 4s;
             }
@@ -125,6 +135,12 @@
         <div class="bgimg" id="i5">
             &nbsp;
         </div>
+        <div class="bgimg" id="i6">
+            &nbsp;
+        </div>
+        <div class="bgimg" id="i7">
+            &nbsp;
+        </div>
     </body>
 
     <script>
@@ -142,8 +158,10 @@
             i2 = document.getElementById("i2");
             i3 = document.getElementById("i3");
             i4 = document.getElementById("i4");
-            i5 = document.getElementById("i5")
-            var items = [i0,i1,i2,i3,i4,i5];
+            i5 = document.getElementById("i5");
+            i6 = document.getElementById("i6");
+            i7 = document.getElementById("i7");
+            var items = [i0,i1,i2,i3,i4,i5,i6,i7,];
             if (imgidx === 1){
                 HideAll(items);
                 items[0].style.display="block";
@@ -159,12 +177,18 @@
             }else if(imgidx === 5){
                 HideAll(items);
                 items[4].style.display="block";
-                imgidx = 0;
             }else if(imgidx == 6){
                 HideAll(items);
                 items[5].style.display="block";
+            }else if(imgidx == 7){
+                HideAll(items);
+                items[6].style.display="block";
+            }else if(imgidx == 8){
+                HideAll(items);
+                items[7].style.display="block";
                 imgidx = 0;
             }
+            
 
             setTimeout(Slides, 4000);
         }
