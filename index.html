@@ -152,7 +152,6 @@
             }
         }
         function Slides(){
-            HideAll(items);
             imgidx ++;
             i0 = document.getElementById("i0");
             i1 = document.getElementById("i1");
@@ -163,6 +162,7 @@
             i6 = document.getElementById("i6");
             i7 = document.getElementById("i7");
             var items = [i0,i1,i2,i3,i4,i5,i6,i7,];
+            HideAll(items);
             if (imgidx === 1){
                 items[0].style.display="block";
             }else if(imgidx === 2){
@@ -183,7 +183,7 @@
             }
             
 
-            setTimeout(Slides, 4000);
+            setTimeout(Slides, 3900);
         }
     </script>
 </html>
