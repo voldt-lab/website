@@ -152,6 +152,7 @@
             }
         }
         function Slides(){
+            HideAll(items);
             imgidx ++;
             i0 = document.getElementById("i0");
             i1 = document.getElementById("i1");
@@ -163,28 +164,20 @@
             i7 = document.getElementById("i7");
             var items = [i0,i1,i2,i3,i4,i5,i6,i7,];
             if (imgidx === 1){
-                HideAll(items);
                 items[0].style.display="block";
             }else if(imgidx === 2){
-                HideAll(items);
                 items[1].style.display="block";
             }else if(imgidx === 3){
-                HideAll(items);
                 items[2].style.display="block";
             }else if(imgidx === 4){
-                HideAll(items);
                 items[3].style.display="block";
             }else if(imgidx === 5){
-                HideAll(items);
                 items[4].style.display="block";
             }else if(imgidx == 6){
-                HideAll(items);
                 items[5].style.display="block";
             }else if(imgidx == 7){
-                HideAll(items);
                 items[6].style.display="block";
             }else if(imgidx == 8){
-                HideAll(items);
                 items[7].style.display="block";
                 imgidx = 0;
             }
